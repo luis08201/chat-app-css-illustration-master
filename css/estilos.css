@@ -9,8 +9,76 @@
 body {
   font-family: "Rubik", sans-serif;
   font-size: 16px;
-  background-color: rgba(35, 35, 141, 0.479);
-  margin: 100px;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+.container .container__bgi--left {
+  width: 422px;
+  height: 85vh;
+  background-color: #9241c8;
+  border-bottom-left-radius: 180px;
+  border-bottom-right-radius: 180px;
+  position: absolute;
+  top: 0;
+  left: -150px;
+  right: 0;
+  margin: 0 auto 0 0;
+  z-index: -1;
+}
+
+.container .container__bgi--right {
+  z-index: -1;
+  width: 422px;
+  height: 85vh;
+  background-color: #f5f3f7;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+  position: absolute;
+  right: -150px;
+  left: 0;
+  margin: 0 0 0 auto;
+  top: 200px;
+}
+
+.submain__container {
+  margin: auto;
+  width: 95%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__description {
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+}
+
+.container__description--heading {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.container__description--paragraph {
+  margin-top: 20px;
+  color: #a39daa;
+  font-size: 14.5px;
+  line-height: 25px;
+}
+
+.main__cellphone {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
 }
 
 .cellphone {
@@ -253,5 +321,42 @@ body {
   margin: 6px auto 0;
   width: 12px;
   height: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    position: relative;
+    padding: 0.1px;
+  }
+  .container .container__bgi--left {
+    width: 422px;
+    height: 55vh;
+    background-color: #9241c8;
+    border-bottom-left-radius: 180px;
+    border-bottom-right-radius: 180px;
+    position: absolute;
+    top: 0;
+    left: -150px;
+    right: 0;
+    margin: 0 auto 0 0;
+    z-index: -1;
+  }
+  .container .container__bgi--right {
+    display: none;
+  }
+  .submain__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    margin: 100px auto;
+  }
+  .container__description {
+    margin-top: 30px;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
