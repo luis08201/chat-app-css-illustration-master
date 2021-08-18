@@ -2,21 +2,21 @@
 
 //TEXT
 
-$pale-violet : hsl(276, 100%, 81%); //(sub-heading at the top of the app UI)
-$moderate-violet : hsl(276, 55%, 52%); //(chat on the left)
-$desaturated-dark-violet : hsl(271, 15%, 43%); //(chat on the right)
-$grayish-blue: hsl(206, 6%, 79%);// (placeholder text)
-$very-dark-desaturated-violet: hsl(271, 36%, 24%);// (main heading)
-$dark-grayish-violet : hsl(270, 7%, 64%);//(paragraph)
+$pale-violet : #d89eff; //(sub-heading at the top of the app UI)
+$moderate-violet : #9241c8; //(chat on the left)
+$desaturated-dark-violet : #6e5d7e; //(chat on the right)
+$grayish-blue: #c6cacd;// (placeholder text)
+$very-dark-desaturated-violet: #3e2753;// (main heading)
+$dark-grayish-violet : #a39daa;//(paragraph)
 
 //Gradients
 //These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
-$light-magenta: hsl(293, 100%, 63%);
-$light-violet: hsl(264, 100%, 61%);
+$light-magenta: #e942ff;
+$light-violet: #8838ff;
 
 //Secondary
 
-$white: hsl(0, 0%, 100%);
-$light-grayish-violet : hsl(270, 20%, 96%);//(app background)
-$very-dark-desaturated-violet: hsl(271, 36%, 24%); // (submit button background)
-$very-light-magenta : hsl(289, 100%, 72%); //(radio button outline)
+$white: #ffffff;
+$light-grayish-violet : #f5f3f7;//(app background)
+$very-dark-desaturated-violet: #3e2753; // (submit button background)
+$very-light-magenta : #e570ff; //(radio button outline)

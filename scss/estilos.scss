@@ -9,63 +9,124 @@
 body {
   font-family: "Rubik", sans-serif;
   font-size: 16px;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
-.container {
+.main__page {
   position: relative;
-  
-  .container__bgi--left {
-    width: 422px;
-    height: 85vh;
-    background-color: $moderate-violet;
-    border-bottom-left-radius: 180px;
-    border-bottom-right-radius: 180px;
+  width: 100%;
+  padding:0.1px;
+  .page__bgi--left {
     position: absolute;
-    top: 0;
-    left: -150px;
+    left: -100px;
     right: 0;
     margin: 0 auto 0 0;
+    background-color: $moderate-violet;
+    border-bottom-left-radius: 220px;
+    border-bottom-right-radius: 220px;
+    width: 422px;
+    height: 580px;
     z-index: -1;
   }
-  .container__bgi--right {
-    z-index: -1;
-    width: 422px;
-    height: 85vh;
-    background-color: $light-grayish-violet;
-    border-top-left-radius: 180px;
-    border-top-right-radius: 180px;
+  .page__bgi--right {
     position: absolute;
-    right: -150px;
+    top: 260px;
+    right: -100px;
     left: 0;
     margin: 0 0 0 auto;
-    top: 200px;
+    background-color: $light-grayish-violet;
+    border-top-left-radius: 220px;
+    border-top-right-radius: 220px;
+    width: 422px;
+    height: 680px;
+    z-index: -1;
   }
 }
-
-.submain__container {
-  margin: auto;
-  width: 95%;
-  height: 100vh;
+.submain__page {
   display: flex;
   justify-content: space-evenly;
+  gap:10px;
+  margin:160px auto;
   align-items: center;
+  width: 90%;
 }
-.container__description {
-  flex-basis: 400px;
+
+.submain__page--description {
+  flex-basis: 460px;
+
+  .submain__page--heading {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  .submain__page--paragraph {
+    margin: 20px 0;
+    color: $dark-grayish-violet;
+    line-height: 25px;
+  }
 }
-.container__description--heading {
-  font-size: 32px;
-  font-weight: 500;
+@media screen and (max-width:850px) and (orientation:landscape){
+    .submain__page {
+  flex-direction: column;
 }
-.container__description--paragraph {
-  margin-top: 20px;
-  color: $dark-grayish-violet;
-  font-size: 14.5px;
-  line-height: 25px;
+  .main__page {
+  .page__bgi--right {
+    display:none;
+  }
 }
-.main__cellphone {
-  flex-basis: 300px;
+.submain__page--description {
+  flex-basis: auto;
+  text-align: center;
 }
+.submain__page__cellphone {
+  margin-bottom: 20px;
+}
+}
+@media screen and (max-width:768px){
+  .main__page {
+     .page__bgi--left {
+    left: -150px;
+    width:440px;
+  }
+  .page__bgi--right {
+    display:none;
+  }
+}
+  .submain__page {
+  flex-direction: column;
+}
+.submain__page__cellphone {
+  margin-bottom: 20px;
+}
+.submain__page--description {
+  flex-basis: auto;
+  text-align: center;
+}
+}
+@media screen and (max-width:425px){
+  .main__page {
+     .page__bgi--left {
+    left: -150px;
+    width:340px;
+  }
+}
+}
+@media screen and (max-width:280px){
+  .main__page {
+     .page__bgi--left {
+    width:290px;
+  }
+}
+.submain__page--description {
+
+  .submain__page--heading {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .submain__page--paragraph {
+    font-size:14px;
+  }
+}
+}
+//CELULAR
 
 .cellphone {
   border: 8px solid $white;
@@ -94,7 +155,6 @@ body {
     background-image: linear-gradient(120deg, $light-violet, $light-magenta);
   }
 }
-
 .top__cellphone--box {
   width: 100%;
   height: 100%;
@@ -129,7 +189,6 @@ body {
   font-weight: 400;
   color: $pale-violet;
 }
-
 //CONTAINER CELLPHONE
 .container__cellphone {
   width: 100%;
@@ -256,36 +315,4 @@ body {
     height: 12px;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .container {
-    position: relative;
-    padding:0.1px;
-    .container__bgi--left {
-      width: 422px;
-      height: 55vh;
-      background-color: $moderate-violet;
-      border-bottom-left-radius: 180px;
-      border-bottom-right-radius: 180px;
-      position: absolute;
-      top: 0;
-      left: -150px;
-      right: 0;
-      margin: 0 auto 0 0;
-      z-index: -1;
-    }
-    .container__bgi--right {
-      display: none;
-    }
-  }
-  .submain__container {
-    flex-direction: column;
-    height: 100vh;
-    margin:100px auto;
-  }
-  .container__description {
-      margin-top: 30px;
-    flex-basis: auto;
-    text-align: center;
-  }
-}
+//CELULAR
