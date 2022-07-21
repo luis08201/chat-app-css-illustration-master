@@ -15,8 +15,8 @@
   --main-heading: #3e2753;
   --paragraph: #a39daa;
   --Gradient-bg: #e942ff;
-  --Gradient: linear-gradient(270deg, rgba(233, 66, 255, 1) 38%, rgba(136, 56, 255, 1) 100%);
-  --Gradient01: linear-gradient(180deg, rgba(233, 66, 255, 1) 28%, rgba(136, 56, 255, 1) 100%);
+  --Gradient: linear-gradient(270deg, #e942ff 38%, #8838ff 100%);
+  --Gradient01: linear-gradient(45deg, rgba(233, 66, 255, 1) 0%, rgba(136, 56, 255, 1) 56%);
   --Gradient02:linear-gradient(90deg, rgba(233, 66, 255, 1) 44%, rgba(136, 56, 255, 1) 100%);
   --White: #ffffff ;
   --soft-white:#fafafa;
@@ -441,7 +441,7 @@ input, label {
 @media screen and (min-width: 1200px) {
   .ellipse {
     max-width: 28.6%;
-    height: 630px;
+    height: 690px;
     border-bottom-left-radius: 220px;
   }
   .ellipse-down {
