@@ -48,6 +48,7 @@ input, label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
@@ -79,6 +80,21 @@ input, label {
   border-right: 1px solid var(--White);
   border-bottom-right-radius: 220px;
   box-shadow: 3px 3px 3px -1px rgb(255, 255, 255);
+}
+
+.ellipse-down {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 50%;
+  width: 100%;
+  /* 200 */
+  height: 500px;
+  background: var(--gray);
+  border-right: 1px solid var(--White);
+  border-top-left-radius: 220px;
+  box-shadow: 3px 3px 3px -1px rgb(255, 255, 255);
+  opacity: 0.3;
 }
 
 .cellphone {
@@ -336,6 +352,8 @@ input, label {
   max-width: 300px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 .booking__secondheading {
   text-align: center;
@@ -353,6 +371,10 @@ input, label {
   .ellipse {
     height: 630px;
     border-bottom-left-radius: 220px;
+  }
+  .ellipse-down {
+    height: 630px;
+    /* border-top-right-radius: 220px; */
   }
   .container {
     padding-top: 140px;
@@ -397,6 +419,9 @@ input, label {
     height: 630px;
     border-bottom-left-radius: 220px;
   }
+  .ellipse-down {
+    max-width: 30%;
+  }
   .cellphone {
     grid-area: cellphone;
   }
@@ -419,6 +444,9 @@ input, label {
     height: 630px;
     border-bottom-left-radius: 220px;
   }
+  .ellipse-down {
+    max-width: 23.6%;
+  }
 }
 .zoom-in {
   -webkit-animation-name: appear;
@@ -434,8 +462,8 @@ input, label {
   -webkit-animation-fill-mode: none;
           animation-fill-mode: none;
   /* shorthand 
-  animation: appear 3s ease 0s infinite normal none;
-  */
+    animation: appear 3s ease 0s infinite normal none;
+    */
 }
 
 @-webkit-keyframes appear {
