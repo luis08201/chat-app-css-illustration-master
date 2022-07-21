@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    //color text
+
+    --Pale-Violet: #d89eff; //(sub-heading at the top of the app UI)
+    --chat-on-the-left: #9241c8; 
+    --chat-on-the-right: #6e5d7e; 
+    --placeholder-text: #c6cacd; 
+    --main-heading: #3e2753; 
+    --paragraph: #a39daa; 
+
+    //Gradients
+    --Gradient-bg: #e942ff;
+    --Gradient: linear-gradient(270deg, rgba(233, 66, 255, 1) 38%, rgba(136, 56, 255, 1) 100%);
+    --Gradient01: linear-gradient(180deg, rgba(233, 66, 255, 1) 28%, rgba(136, 56, 255, 1) 100%);
+    --Gradient02:linear-gradient(90deg, rgba(233, 66, 255, 1) 44%, rgba(136, 56, 255, 1) 100%);
+    //Secondary
+    --White: #ffffff ;
+    --soft-white:#fafafa;
+    --app-background : #f5f3f7 ;
+    --gray:#ede5f4;
+    --submit-button-background : #3e2753; 
+    --radio-button-outline : #e570ff;
+
+    //animation
+    --animation:0.5s;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--soft-white);
+}
+
+input,label{
+    font-family: 'Rubik', sans-serif;
+}

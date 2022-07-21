@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Pale-Violet: #d89eff;
+  --chat-on-the-left: #9241c8;
+  --chat-on-the-right: #6e5d7e;
+  --placeholder-text: #c6cacd;
+  --main-heading: #3e2753;
+  --paragraph: #a39daa;
+  --Gradient-bg: #e942ff;
+  --Gradient: linear-gradient(270deg, rgba(233, 66, 255, 1) 38%, rgba(136, 56, 255, 1) 100%);
+  --Gradient01: linear-gradient(180deg, rgba(233, 66, 255, 1) 28%, rgba(136, 56, 255, 1) 100%);
+  --Gradient02:linear-gradient(90deg, rgba(233, 66, 255, 1) 44%, rgba(136, 56, 255, 1) 100%);
+  --White: #ffffff ;
+  --soft-white:#fafafa;
+  --app-background: #f5f3f7 ;
+  --gray:#ede5f4;
+  --submit-button-background: #3e2753;
+  --radio-button-outline: #e570ff;
+  --animation:0.5s;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--soft-white);
+}
+
+input, label {
+  font-family: "Rubik", sans-serif;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 85%;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "cellphone" "description";
+  gap: 71px;
+  padding: 70px 0;
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 874px;
+  }
+}
+
+.ellipse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 50%;
+  width: 100%;
+  /* 200 */
+  height: 500px;
+  background: var(--Gradient-bg);
+  background-image: var(--Gradient01);
+  border-right: 1px solid var(--White);
+  border-bottom-right-radius: 220px;
+  box-shadow: 3px 3px 3px -1px rgb(255, 255, 255);
+}
+
+.cellphone {
+  grid-area: cellphone;
+  position: relative;
+  z-index: 100;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+  height: 506px;
+  border: 12px solid var(--White);
+  border-radius: 28px;
+  box-shadow: 0px 30px 24px 1px rgba(0, 0, 0, 0.1);
+  background-color: var(--app-background);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cellphone__top {
+  background: var(--Gradient-bg);
+  background-image: var(--Gradient);
+  height: 65px;
+  position: relative;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0px 2px 19px -7px rgba(0, 0, 0, 0.2);
+}
+.cellphone__top--camera {
+  width: 130px;
+  height: 17px;
+  background-color: var(--White);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 2px 19px -7px rgba(0, 0, 0, 0.2);
+}
+.cellphone__top--perfil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 11px 14px 0;
+}
+.cellphone__top--left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.cellphone__top--username {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.cellphone__top--information {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cellphone__top--back svg {
+  width: 5px;
+  padding-bottom: 2px;
+}
+.cellphone__top--userImg {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: block;
+  outline: 1px solid var(--White);
+}
+.cellphone__top--setting svg {
+  width: 4px;
+}
+.cellphone__top--name {
+  font-size: 0.6rem;
+  text-transform: capitalize;
+  color: var(--White);
+  font-weight: 500;
+}
+.cellphone__top--status {
+  font-size: 0.6rem;
+  color: var(--Pale-Violet);
+}
+.cellphone__middle {
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.cellphone__middle--left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cellphone__middle--leftPopup {
+  background-color: var(--gray);
+  color: var(--chat-on-the-left);
+  width: 135px;
+  padding: 7px 12px;
+  border-radius: 10px 8px 8px 2px;
+}
+.cellphone__middle--rightPopup {
+  background-color: var(--White);
+  color: var(--chat-on-the-right);
+  padding: 7px 12px;
+  border-radius: 8px 8px 2px 8px;
+}
+.cellphone__middle--right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cellphone__middle--attachments {
+  padding-top: 7px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.cellphone__middle--picture {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cellphone__middle--img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.cellphone__middle--sms {
+  font-size: 0.5rem;
+  line-height: 0.7rem;
+}
+.cellphone__middle--form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cellphone__middle--itemForm {
+  background-image: var(--Gradient02);
+  width: 150px;
+  height: 30px;
+  border-radius: 10px 8px 8px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+}
+.cellphone__middle--middleheading {
+  font-size: 0.6rem;
+  color: var(--White);
+}
+.cellphone__middle--span {
+  font-size: 0.5rem;
+  color: var(--White);
+}
+.cellphone__middle--lbl {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 2px;
+  padding: 1px 0;
+}
+.cellphone__bottom--form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--White);
+  max-width: 214px;
+  width: 90%;
+  height: 34px;
+  margin: 0 auto 10px;
+  border-radius: 24px;
+}
+.cellphone__bottom--item {
+  height: inherit;
+  padding-left: 10px;
+  width: 78%;
+  display: flex;
+  align-items: center;
+}
+.cellphone__bottom--item:last-child {
+  width: 18%;
+}
+.cellphone__bottom--input {
+  color: var(--placeholder-text);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 0.6rem;
+  height: inherit;
+  transition: var(--animation);
+}
+.cellphone__bottom--input:hover, .cellphone__bottom--input:focus-visible {
+  outline: none;
+  color: var(--chat-on-the-left);
+}
+.cellphone__bottom--btn {
+  border: none;
+  outline: none;
+  background-color: var(--submit-button-background);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cellphone__bottom--btn svg {
+  width: 6px;
+}
+
+.cellphone__middle--lbl input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 15px;
+}
+
+.cellphone__middle--lbl input[type=radio] + i {
+  border: 1px solid var(--radio-button-outline);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cellphone__middle--lbl input[type=radio] + i::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-color: var(--radio-button-outline);
+  opacity: 0;
+  transform: scale(0);
+  transition: var(--animation);
+}
+
+.cellphone__middle--lbl input[type=radio]:checked + i::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cellphone__middle--lbl input[type=radio]:not(:checked) + i::before {
+  background-color: transparent;
+}
+
+.booking {
+  grid-area: description;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+.booking__secondheading {
+  text-align: center;
+  color: var(--main-heading);
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+.booking__paragraph {
+  text-align: center;
+  color: var(--paragraph);
+  line-height: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .ellipse {
+    height: 630px;
+    border-bottom-left-radius: 220px;
+  }
+  .container {
+    padding-top: 140px;
+  }
+  .cellphone__top--back svg {
+    width: 6px;
+  }
+  .cellphone__top--setting svg {
+    width: 5px;
+  }
+  .cellphone__top--name {
+    font-size: 0.7rem;
+  }
+  .cellphone__top--status {
+    font-size: 0.6rem;
+  }
+  .cellphone__middle--sms {
+    font-size: 0.5rem;
+    line-height: 0.7rem;
+  }
+  .cellphone__middle--middleheading {
+    font-size: 0.6rem;
+  }
+  .cellphone__middle--span {
+    font-size: 0.6rem;
+  }
+  .cellphone__middle--leftPopup {
+    width: 135px;
+  }
+  .cellphone__bottom--input {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "cellphone description";
+    align-items: center;
+  }
+  .ellipse {
+    max-width: 30%;
+    height: 630px;
+    border-bottom-left-radius: 220px;
+  }
+  .cellphone {
+    grid-area: cellphone;
+  }
+  .booking {
+    grid-area: description;
+    max-width: 450px;
+  }
+  .booking__secondheading {
+    text-align: left;
+    font-size: 2rem;
+  }
+  .booking__paragraph {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ellipse {
+    max-width: 28.6%;
+    height: 630px;
+    border-bottom-left-radius: 220px;
+  }
+}
+.zoom-in {
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  /* shorthand 
+  animation: appear 3s ease 0s infinite normal none;
+  */
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}/*# sourceMappingURL=main.css.map */

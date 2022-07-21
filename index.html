@@ -5,109 +5,162 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="css/estilos.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <title>Frontend Mentor | Chat app CSS illustration</title>
 </head>
 
 <body>
-<main class="main__page">
-  <div class="page__bgi--left"></div>
-  <div class="page__bgi--right"></div>
-  <div class="submain__page">
-    <div class="submain__page__cellphone">
-      <div class="cellphone">
-        <div class="top--center__cellphone"></div>
-        <div class="top__cellphone">
-          <div class="top__cellphone--box">
-            <div class="top__cellphone--user">
-              <div class="top__cellphone--arrow">
-                <img src="img/chevron-left-solid.svg" alt="" class="top__cellphone--ico">
-              </div>
-              <figure class="cellphone__user--picture">
-                <img src="img/avatar.jpg" alt="" class="cellphone__user--img">
-              </figure>
-              <div class="cellphone__user--description">
-                <h3 class="cellphone__user--name">Samuel Green</h3>
-                <h4 class="cellphone__user--status">Available to Walk</h4>
+  <main class="main">
+    <section class="ellipse"></section>
+    <div class="container">
+      <section class="cellphone">
+        <div class="cellphone__top">
+          <div class="cellphone__top--camera"></div>
+          <div class="cellphone__top--perfil">
+            <div class="cellphone__top--left">
+              <a href="#" class="cellphone__top--back">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                  class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512">
+                  <path fill="#fff"
+                    d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                  </path>
+                </svg>
+              </a>
+              <div class="cellphone__top--username">
+                <figure class="cellphone__top--userphoto">
+                  <img src="assets/img/avatar.jpg" alt="Samuel Green's photo" class="cellphone__top--userImg">
+                </figure>
+                <div class="cellphone__top--information">
+                  <h2 class="cellphone__top--name">samuel green</h2>
+                  <p class="cellphone__top--status">Available to Walk</p>
+                </div>
               </div>
             </div>
-            <div class="top__cellphone--menu">
-              <img src="img/ellipsis-v-solid.svg" alt="" class="top__cellphone--ico">
+            <div class="cellphone__top--right">
+              <a href="#" class="cellphone__top--setting">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-v"
+                  class="svg-inline--fa fa-ellipsis-v fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 192 512">
+                  <path fill="#fff"
+                    d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z">
+                  </path>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-        <div class="container__cellphone">
-          <div class="container___popup--left">
-            <p class="container__popup--paragraph">That sounds great. I’d be happy with that.</p>
-          </div>
-          <div class="container___popup--left">
-            <p class="container__popup--paragraph">Could you send over some pictures of your dog, please?</p>
-          </div>
-          <div class="container___popup--right--img">
-            <img src="img/dog-image-1.jpg" alt="" class="container__popup--img">
-            <img src="img/dog-image-2.jpg" alt="" class="container__popup--img">
-            <img src="img/dog-image-3.jpg" alt="" class="container__popup--img">
-          </div>
-          <div class="container___popup--right">
-            <p class="container__popup--paragraph-right">
-              Here are a few pictures. She’s a happy girl!
-            </p>
-          </div>
-          <div class="container___popup--right">
-            <p class="container__popup--paragraph-right">Can you make it?</p>
-          </div>
-          <div class="container___popup--left">
-            <p class="container__popup--paragraph">
-              She looks so happy! The time we discussed works. How long shall I take her out for?
-            </p>
-          </div>
-          <div class="container___popup--left--call">
-            <div class="call__time--box">
-              <div class="input--call__time"></div>
-              <p class="call__time">30 minute walk</p>
-            </div>
-            <h2 class="call__time--price">$29</h2>
-          </div>
-          <div class="container___popup--left--call">
-            <div class="call__time--box">
-              <div class="input--call__time"></div>
-              <p class="call__time">1 hour walk</p>
-            </div>
-            <h2 class="call__time--price">$49</h2>
-          </div>
-          <div class="container___popup">
-            <form action="" class="container__popup--form">
-              <div class="container__popup--text">
-                <input type="text" placeholder="Type a message…" id="" class="input__popup--text">
+        <div class="cellphone__body">
+          <div class="cellphone__middle">
+            <div class="cellphone__middle--item cellphone__middle--left" >
+              <div class="cellphone__middle--popupSMS cellphone__middle--leftPopup">
+                <p class="cellphone__middle--sms">That sounds great. I’d be <br> happy with that.</p>
               </div>
-              <div class="container__popup--right-arrow">
-                <img src="img/chevron-right-solid.svg" alt="" class="container__popup--ico">
+            </div>
+            <div class="cellphone__middle--item cellphone__middle--left">
+              <div class="cellphone__middle--popupSMS cellphone__middle--leftPopup">
+                <p class="cellphone__middle--sms">Could you send over some <br> pictures of your dog, please?</p>
               </div>
+            </div>
+            <div class="cellphone__middle--item cellphone__middle--right">
+              <div class="cellphone__middle--attachments">
+                <figure class="cellphone__middle--picture">
+                  <img src="assets/img/dog-image-1.jpg" alt="Dog's photo" class="cellphone__middle--img">
+                </figure>
+                <figure class="cellphone__middle--picture">
+                  <img src="assets/img/dog-image-2.jpg" alt="Dog's photo" class="cellphone__middle--img">
+                </figure>
+                <figure class="cellphone__middle--picture">
+                  <img src="assets/img/dog-image-3.jpg" alt="Dog's photo" class="cellphone__middle--img">
+                </figure>
+              </div>
+            </div>
+            <div class="cellphone__middle--item cellphone__middle--right">
+              <div class="cellphone__middle--popupSMS cellphone__middle--rightPopup">
+                <p class="cellphone__middle--sms">Here are a few pictures. She’s <br> a happy girl!</p>
+              </div>
+            </div>
+            <div class="cellphone__middle--item cellphone__middle--right">
+              <div class="cellphone__middle--popupSMS cellphone__middle--rightPopup">
+                <p class="cellphone__middle--sms">Can you make it?</p>
+              </div>
+            </div>
+            <div class="cellphone__middle--item cellphone__middle--left">
+              <div class="cellphone__middle--popupSMS cellphone__middle--leftPopup">
+                <p class="cellphone__middle--sms">She looks so happy! The time <br> we discussed works. How <br> long shall I take her out for?</p>
+              </div>
+            </div>
+           <div class="cellphone__middle--item cellphone__middle--left">
+            <form action="" class="cellphone__middle--form">
+              <div class="cellphone__middle--itemForm">
+                <label for="minute" class="cellphone__middle--lbl">
+                <input type="radio" id="minute" name="fav_language" value="minute">
+                <i></i>
+                <span class="cellphone__middle--span">30 minutes walk</span>
+              </label>
+              <h3 class="cellphone__middle--middleheading">$29</h3>
+            </div>
+              <div class="cellphone__middle--itemForm">
+                <label for="hour" class="cellphone__middle--lbl">
+                <input type="radio" id="hour" name="fav_language" value="hour">
+                <i></i>
+                <span class="cellphone__middle--span">1 hour walk</span>
+              </label>
+              <h3 class="cellphone__middle--middleheading">$49</h3>
+            </div>
+       
+           
             </form>
+           </div>
           </div>
         </div>
-      </div>
+        <div class="cellphone__bottom">
+          <form action="" class="cellphone__bottom--form">
+            <div class="cellphone__bottom--item">
+              <input type="text" class="cellphone__bottom--input" placeholder="Type a messages...">
+            </div>
+            <div class="cellphone__bottom--item">
+              <button type="submit" class="cellphone__bottom--btn">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                  class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512">
+                  <path fill="#FFF"
+                    d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <article class="booking">
+        <h2 class="booking__secondheading">
+          Simple booking
+        </h2>
+        <p class="booking__paragraph">
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to
+          discuss arrangements and make bookings. Once the walk has been completed you can rate
+          your walker and book again all through the chat.
+        </p>
+      </article>
     </div>
-    <div class="submain__page--description">
-      <h1 class="submain__page--heading">Simple Booking</h1>
-      <p class="submain__page--paragraph">
-        Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
-      </p>
-    </div>
-  </div>
-</main>
-
-   
+  </main>
 
 
- 
+
 
   <!-- 
+
+ 
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+ 
 </body>
 
 </html>
